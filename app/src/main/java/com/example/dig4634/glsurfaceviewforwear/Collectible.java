@@ -50,6 +50,7 @@ public class Collectible extends ShadedTexturedModel {
                 0,1,        //This is the pixel of the texture that will be attached to vertex (id:2)
                 1,1,        //(id:3)
                 1,0         //(id:4)
+                //Good update
         });
 
         setNormals(new float[]{0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0});
