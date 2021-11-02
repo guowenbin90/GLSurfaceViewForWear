@@ -26,35 +26,31 @@ public class Collectible extends ShadedTexturedModel {
     Collectible(){
         super();
 
-        setXYZ(new float[]{-0.5f,0.5f,0.5f,
-                0.5f,0.5f,0.5f,
-                -0.5f,-0.5f,0.5f,
-                0.5f,-0.5f,0.5f,
-                -0.5f,0.5f,-0.5f,
-                0.5f,0.5f,-0.5f,
-                -0.5f,-0.5f,-0.5f,
-                0.5f,-0.5f,-0.5f,
-                0.5f,0.5f,0.5f,
-                0.5f,-0.5f,0.5f,
-                0.5f,0.5f,-0.5f,
-                0.5f,-0.5f,-0.5f,
-                -0.5f,0.5f,0.5f,
-                -0.5f,-0.5f,0.5f,
-                -0.5f,0.5f,-0.5f,
-                -0.5f,-0.5f,-0.5f,
-                -0.5f,0.5f,0.5f,
-                0.5f,0.5f,0.5f,
-                -0.5f,0.5f,-0.5f,
-                0.5f,0.5f,-0.5f,
-                -0.5f,-0.5f,0.5f,
-                0.5f,-0.5f,0.5f,
-                -0.5f,-0.5f,-0.5f,
-                0.5f,-0.5f,-0.5f});
+        setXYZ(new float[]{
+                0,1,0,          //(id:0)
+                -0.5f,0,-0.5f,  //(id:1)
+                0.5f,0,-0.5f,   //(id:2)
+                0.5f,0,0.5f,    //(id:3)
+                -0.5f,0,0.5f,   //(id:4)
+        });
 
 
-        setTriangles(new short[]{0,2,1,1,2,3,4,5,6,6,5,7,9,11,8,8,11,10,13,12,15,15,12,14,16,17,18,18,17,19,21,20,22,21,22,23});
+        setTriangles(new short[]{
+                0,1,2, // my first triangle
+                0,1,4, // left triangle
+                0,3,4,
+                0,2,3, // right triangle
+                1,3,4, // bottom triangle 1st Half
+                1,2,3  // bottom triangle 2nd Half
+                });
 
-        setUV(new float[]{0,1,1,1,0,0,1,0,1,1,0,1,1,0,0,0,0,1,0,0,1,1,1,0,1,1,1,0,0,1,0,0,0,0,1,0,0,1,1,1,1,0,0,0,1,1,0,1});
+        setUV(new float[]{
+                0.5f,0.5f,  //This is the pixel of the texture that will be attached to vertex (id:0)
+                0,0,        //This is the pixel of the texture that will be attached to vertex (id:1)
+                0,1,        //This is the pixel of the texture that will be attached to vertex (id:2)
+                1,1,        //(id:3)
+                1,0         //(id:4)
+        });
 
         setNormals(new float[]{0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0});
 
